@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOS 檳城新家庭生活手冊 | Friends of School</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --accent: #d97706;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans TC', 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      padding: 48px;
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: #ccfbf1;
+      color: var(--primary-dark);
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 32px;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+    .welcome-box {
+      background: #f0fdf4;
+      border-left: 4px solid var(--primary);
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin-bottom: 36px;
+    }
+    .section-title {
+      font-size: 22px;
+      color: var(--primary);
+      margin: 32px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      background: #fafafa;
+    }
+    .card h3 {
+      font-size: 18px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li { margin-bottom: 6px; }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .container { box-shadow: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge"><i class="fa-solid fa-users"></i> 家長會 Friends of School (FOS)</span>
+      <h1>檳城新家庭生活指南</h1>
+      <p class="subtitle">Penang New Family Welcome & Lifestyle Handbook</p>
+    </header>
+
+    <div class="welcome-box">
+      <h3><i class="fa-solid fa-heart" style="color: #e11d48;"></i> 親愛的新家庭，歡迎來到檳城！</h3>
+      <p>移居到新城市是一段令人興奮的旅程。家長會（FOS）特別編纂了這份手冊，希望能幫助您與孩子快速融入這座兼具美麗海景、豐富人文與美食的東方之珠！</p>
+    </div>
+
+    <h2 class="section-title"><i class="fa-solid fa-comments"></i> 1. 家長會 (FOS) 社團支援</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3><i class="fa-solid fa-handshake" style="color: var(--primary);"></i> 親子 Buddy 計畫</h3>
+        <p>為每位新家庭配對資深家長，提供一對一生活諮詢、語言翻譯與校園生活輔導。</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-mug-hot" style="color: var(--accent);"></i> 家長茶會 Coffee Morning</h3>
+        <p>每月定期舉行，提供放鬆交流的空間，分享檳城美食、家政服務與課外活動資訊。</p>
+      </div>
+    </div>
+
+    <h2 class="section-title"><i class="fa-solid fa-house-user"></i> 2. 居住與生活安頓</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>社區名稱</th>
+          <th>主要特色</th>
+          <th>生活機能</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Batu Ferringhi / Tanjung Bungah</b></td>
+          <td>國際學校密集、臨海風景優美、外籍社區成熟</td>
+          <td>度假風住宅、沙灘水上運動、國際餐廳</td>
+        </tr>
+        <tr>
+          <td><b>Gurney / Tanjung Tokong</b></td>
+          <td>商業中心、大型購物中心（Gurney Plaza）、醫療方便</td>
+          <td>高級高層公寓、高級超市（Village Grocer）、精緻餐飲</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title"><i class="fa-solid fa-hospital"></i> 3. 醫療與健康保障</h2>
+    <ul>
+      <li><b>檳城南洋醫院 (Penang Adventist Hospital)</b>：設有 24 小時急診與專業小兒科。</li>
+      <li><b>檳榔醫院 (Island Hospital)</b>：醫療設備先進，提供全方位國際門診。</li>
+      <li><b>鷹閣醫院 (Gleneagles Hospital)</b>：優質醫療服務與舒適就診環境。</li>
+    </ul>
+
+    <h2 class="section-title"><i class="fa-solid fa-car"></i> 4. 交通出行與簽證</h2>
+    <ul>
+      <li><b>Grab App</b>：當地最便利的叫車與外送服務，支援信用卡支付。</li>
+      <li><b>駕照事項</b>：馬來西亞為右駕（左側通行），國際駕照可短期使用。</li>
+      <li><b>簽證備忘</b>：確保家長陪讀簽（Guardian Pass）與學生簽保持有效狀態。</li>
+    </ul>
+
+    <h2 class="section-title"><i class="fa-solid fa-icons"></i> 5. 育樂與休閒推薦</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3><i class="fa-solid fa-tree" style="color: #16a34a;"></i> 戶外自然</h3>
+        <p>ESCAPE 探索公園、Entopia 蝴蝶公園、升旗山 (Penang Hill) 熱帶雨林步道。</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-basket-shopping" style="color: #2563eb;"></i> 採買購物</h3>
+        <p>Village Grocer、Lotus's 超市，以及 Tanjung Bungah 當地生鮮濕貨市場。</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Friends of School (FOS) Parent Association. Created with care for our school families.</p>
+    </footer>
+  </div>
+</body>
+</html>

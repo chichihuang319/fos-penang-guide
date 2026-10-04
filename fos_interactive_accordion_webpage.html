@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOS 檳城新家庭一頁式摺疊指南</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+  <style>
+    body { font-family: 'Noto Sans TC', sans-serif; }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+    .accordion-content.active { max-height: 1000px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen pb-12">
+
+  <!-- Header Banner -->
+  <header class="bg-teal-700 text-white py-12 px-6 shadow-md">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="inline-block bg-teal-800 text-teal-200 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">FOS Parent Guide</span>
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">檳城新家庭生活指南</h1>
+      <p class="text-teal-100 text-sm md:text-base max-w-xl mx-auto">家長會（Friends of School）特別製作｜快速搜尋與摺疊分類手冊</p>
+      
+      <!-- Search Input -->
+      <div class="mt-6 max-w-md mx-auto relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400"></i>
+        <input type="text" id="searchInput" onkeyup="filterSections()" placeholder="搜尋關鍵字（例如：醫院、叫車、學校、超市）..." class="w-full pl-11 pr-4 py-2.5 rounded-full text-slate-900 focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-inner">
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-4xl mx-auto px-4 mt-8 space-y-4" id="accordionContainer">
+
+    <!-- Section 1 -->
+    <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <button onclick="toggleAccordion(this)" class="w-full text-left p-5 font-bold text-lg text-teal-900 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition">
+        <span><i class="fa-solid fa-heart-pulse text-teal-600 mr-2.5"></i>1. 家長會 (FOS) 支援與社群</span>
+        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+      </button>
+      <div class="accordion-content">
+        <div class="p-6 text-slate-600 space-y-3 border-t border-slate-100 text-sm md:text-base">
+          <p>歡迎加入我們的大家庭！家長會（Friends of School）為您提供多項落地服務：</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><b>Buddy Parent 夥伴計畫：</b>一對一對接資深家長解答日常生活疑問。</li>
+            <li><b>Coffee Morning 家長聚會：</b>每個月固定舉辦茶會，交流親子與生活的經驗。</li>
+            <li><b>語言互助小組：</b>提供多語言支援，幫助非英語母語家庭迅速溝通適應。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <button onclick="toggleAccordion(this)" class="w-full text-left p-5 font-bold text-lg text-teal-900 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition">
+        <span><i class="fa-solid fa-house text-teal-600 mr-2.5"></i>2. 居住區域與生活安頓</span>
+        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+      </button>
+      <div class="accordion-content">
+        <div class="p-6 text-slate-600 space-y-4 border-t border-slate-100 text-sm md:text-base">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <h4 class="font-bold text-slate-800 mb-1">Tanjung Bungah / Batu Ferringhi</h4>
+              <p class="text-xs text-slate-500">適合喜愛海景、希望縮短上學通勤距離的家庭。</p>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <h4 class="font-bold text-slate-800 mb-1">Gurney / Tanjung Tokong</h4>
+              <p class="text-xs text-slate-500">生活機能極佳，緊鄰 Gurney Plaza 與大型醫療院所。</p>
+            </div>
+          </div>
+          <p><b>實用 Tips：</b>寬頻網路推薦安裝 TIME 或 Unifi；水電帳戶可下載 MyTNB 與 PBA App 進行線上繳費。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <button onclick="toggleAccordion(this)" class="w-full text-left p-5 font-bold text-lg text-teal-900 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition">
+        <span><i class="fa-solid fa-user-doctor text-teal-600 mr-2.5"></i>3. 醫療健康與緊急應變</span>
+        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+      </button>
+      <div class="accordion-content">
+        <div class="p-6 text-slate-600 space-y-3 border-t border-slate-100 text-sm md:text-base">
+          <div class="bg-rose-50 border-l-4 border-rose-500 p-3 text-rose-800 text-xs font-bold rounded">
+            緊急求助專線：999 (警察/救護車)
+          </div>
+          <ul class="space-y-2">
+            <li><b>檳城南洋醫院 (Penang Adventist Hospital)：</b>急診 24 小時開放，小兒科照護評估優良。</li>
+            <li><b>檳榔醫院 (Island Hospital)：</b>設備齊全，提供國際標準照護。</li>
+            <li><b>鷹閣醫院 (Gleneagles Hospital)：</b>環境舒適，專科醫師陣容完整。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <button onclick="toggleAccordion(this)" class="w-full text-left p-5 font-bold text-lg text-teal-900 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition">
+        <span><i class="fa-solid fa-car text-teal-600 mr-2.5"></i>4. 交通出行與簽證</span>
+        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+      </button>
+      <div class="accordion-content">
+        <div class="p-6 text-slate-600 space-y-3 border-t border-slate-100 text-sm md:text-base">
+          <p><b>Grab 叫車：</b>當地最普及且安全的交通工具。</p>
+          <p><b>駕駛習慣：</b>右駕（車輛靠左行駛）。短期內可使用國際駕照。</p>
+          <p><b>簽證規範：</b>保持學生簽（Student Pass）與陪讀簽（Guardian Pass）合法效期。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <button onclick="toggleAccordion(this)" class="w-full text-left p-5 font-bold text-lg text-teal-900 bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition">
+        <span><i class="fa-solid fa-bag-shopping text-teal-600 mr-2.5"></i>5. 採買與休閒娛樂</span>
+        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+      </button>
+      <div class="accordion-content">
+        <div class="p-6 text-slate-600 space-y-3 border-t border-slate-100 text-sm md:text-base">
+          <p><b>日常超市：</b>Village Grocer (進口生鮮)、Lotus's (大容量規格)。</p>
+          <p><b>親子推薦：</b>ESCAPE 主題樂園、Entopia 蝴蝶公園、升旗山纜車 (Penang Hill)。</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive Script -->
+  <script>
+    function toggleAccordion(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.fa-chevron-down');
+      
+      content.classList.toggle('active');
+      if (icon) {
+        icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+    }
+
+    function filterSections() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const items = document.querySelectorAll('.accordion-item');
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(input)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
